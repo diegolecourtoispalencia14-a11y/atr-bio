@@ -21,61 +21,13 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
   <link rel="shortcut icon" href="./favicon.ico">
 
-  <!-- Google Fonts: Plus Jakarta Sans + Outfit (Clean Architectural Editorial) -->
+  <!-- Google Fonts: Plus Jakarta Sans + Outfit (Optimized critical weights with display=swap) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Tailwind Play CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-            display: ['"Outfit"', 'sans-serif'],
-          },
-          colors: {
-            atr: {
-              noir: '#110D0B',
-              espresso: '#17120F',
-              surface: '#1D1714',
-              surfaceLight: '#261F1B',
-              terracotta: '#9A5844',
-              terracottaLight: '#C87A5B',
-              terracottaHover: '#D98B6C',
-              terracottaDark: '#4E2E23',
-              cream: '#F4EFEA',
-              creamMuted: '#D8CEC5',
-              creamDark: '#A8998D',
-              border: 'rgba(244, 239, 234, 0.08)',
-              borderWarm: 'rgba(200, 122, 91, 0.25)',
-            }
-          },
-          boxShadow: {
-            'glow-terracotta': '0 0 45px -10px rgba(200, 122, 91, 0.35)',
-            'inner-warm': 'inset 0 1px 1px 0 rgba(255, 255, 255, 0.1)',
-          }
-        }
-      }
-    }
-  </script>
-
-  <style>
-    /* Noise texture overlay for high-end tactile feel */
-    .bg-grain {
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.038'/%3E%3C/svg%3E");
-    }
-
-    /* Spring-physics feel for interactive components */
-    .btn-spring {
-      transition: transform 0.22s cubic-bezier(0.32, 0.72, 0, 1), box-shadow 0.22s cubic-bezier(0.32, 0.72, 0, 1), background-color 0.2s ease, border-color 0.2s ease;
-    }
-    .btn-spring:active {
-      transform: scale(0.978);
-    }
-  </style>
+  <!-- Precompiled Production Tailwind CSS (Instant load, zero JS compilation lag) -->
+  <link rel="stylesheet" href="./dist/style.css">
 </head>
 <body class="bg-[#110D0B] text-[#F4EFEA] font-sans antialiased selection:bg-[#9A5844]/40 selection:text-white min-h-[100dvh] relative overflow-x-hidden flex flex-col justify-between">
 
@@ -89,7 +41,10 @@
   <!-- TOP HERO BANNER / REAL ARCHITECTURE BACKDROP -->
   <div class="relative w-full h-44 sm:h-52 overflow-hidden z-0">
     <!-- Real Architectural Kitchen Photo from ATR Portfolio -->
-    <img src="./assets/hero_cocina.jpg" alt="Remodelación de Cocina Luxury ATR" class="w-full h-full object-cover object-center filter brightness-[0.7] contrast-[1.08] scale-105 transform hover:scale-100 transition-transform duration-1000">
+    <picture>
+      <source srcset="./assets/hero_cocina.webp" type="image/webp">
+      <img src="./assets/hero_cocina.jpg" alt="Remodelación de Cocina Luxury ATR" width="800" height="400" fetchpriority="high" decoding="async" class="w-full h-full object-cover object-center filter brightness-[0.7] contrast-[1.08] scale-105 transform hover:scale-100 transition-transform duration-1000">
+    </picture>
     <!-- Gradient Fade to Deep Espresso -->
     <div class="absolute inset-0 bg-gradient-to-b from-[#110D0B]/40 via-[#110D0B]/70 to-[#110D0B]"></div>
     
@@ -114,7 +69,10 @@
 
         <!-- Official Brand Logo: AQUÍ TU REMODELACIÓN -->
         <div class="flex flex-col items-center mb-2 relative z-10">
-          <img src="./assets/logo_atr.png" alt="Aquí Tu Remodelación" class="h-16 sm:h-20 w-auto object-contain filter drop-shadow-lg">
+          <picture>
+            <source srcset="./assets/logo_atr.webp" type="image/webp">
+            <img src="./assets/logo_atr.png" alt="Aquí Tu Remodelación" width="400" height="206" fetchpriority="high" decoding="async" class="h-16 sm:h-20 w-auto object-contain filter drop-shadow-lg">
+          </picture>
           <span class="text-[9px] font-semibold tracking-[0.25em] text-atr-terracottaLight uppercase mt-2">
             ARQUITECTURA &amp; DIRECCIÓN DE OBRA
           </span>
@@ -221,7 +179,10 @@
           <div class="flex items-center gap-3">
             <!-- REAL PHOTO AVATAR -->
             <div class="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-atr-terracottaLight/40 flex-shrink-0 shadow-md">
-              <img src="./assets/eva_villicana.png" alt="Arq. Eva Villicaña" class="w-full h-full object-cover object-top">
+              <picture>
+                <source srcset="./assets/eva_villicana.webp" type="image/webp">
+                <img src="./assets/eva_villicana.png" alt="Arq. Eva Villicaña" width="48" height="48" loading="lazy" decoding="async" class="w-full h-full object-cover object-top">
+              </picture>
               <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-full"></div>
             </div>
             <div>
@@ -253,7 +214,10 @@
           <div class="flex items-center gap-3">
             <!-- REAL PHOTO AVATAR -->
             <div class="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-atr-terracottaLight/40 flex-shrink-0 shadow-md">
-              <img src="./assets/juan_carlos.png" alt="Juan Carlos Sánchez Velarde" class="w-full h-full object-cover object-center">
+              <picture>
+                <source srcset="./assets/juan_carlos.webp" type="image/webp">
+                <img src="./assets/juan_carlos.png" alt="Juan Carlos Sánchez Velarde" width="48" height="48" loading="lazy" decoding="async" class="w-full h-full object-cover object-center">
+              </picture>
               <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-full"></div>
             </div>
             <div>
@@ -354,7 +318,10 @@
       <!-- Featured Project Card: Baño Spa Travertino -->
       <div class="rounded-2xl overflow-hidden bg-[#17120F] border border-white/10 group">
         <div class="relative h-28 overflow-hidden">
-          <img src="./assets/hero_bano.jpg" alt="Baño Spa Travertino ATR" class="w-full h-full object-cover object-center filter brightness-90 group-hover:scale-105 transition-transform duration-700">
+          <picture>
+            <source srcset="./assets/hero_bano.webp" type="image/webp">
+            <img src="./assets/hero_bano.jpg" alt="Baño Spa Travertino ATR" width="640" height="320" loading="lazy" decoding="async" class="w-full h-full object-cover object-center filter brightness-90 group-hover:scale-105 transition-transform duration-700">
+          </picture>
           <div class="absolute inset-0 bg-gradient-to-t from-[#17120F] via-transparent to-black/20"></div>
           <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold uppercase tracking-wider text-atr-cream">
             Obra Residencial ATR
