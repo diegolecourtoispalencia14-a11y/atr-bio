@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Aquí Tu Remodelación | Franquicia Cuautitlán Izcalli & Zona Norte</title>
+  
+  <!-- Meta SEO & Social Sharing -->
+  <meta name="description" content="Arquitectura residencial y dirección de obra. Diseño y remodelación llave en mano con presupuesto cerrado por contrato, renders 3D y 2 años de garantía certificada en Cuautitlán Izcalli, Satélite y Zona Esmeralda.">
+  <meta property="og:title" content="Aquí Tu Remodelación | Zona Norte & Edomex">
+  <meta property="og:description" content="Tu vida evoluciona. Tu espacio también. Agenda tu diagnóstico técnico con la Arq. Eva Villicaña y Juan Carlos Sánchez.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#120E0C">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Favicon SVG en Terracota Cálido -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231E1714'/%3E%3Cpath d='M7 21L16 9l9 12h-4.5l-4.5-6.5L11.5 21H7z' fill='%23C87A5B'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Plus Jakarta Sans + Outfit (Clean Architectural Editorial) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif'],
+          },
+          colors: {
+            atr: {
+              noir: '#110D0B',
+              espresso: '#17120F',
+              surface: '#1D1714',
+              surfaceLight: '#261F1B',
+              terracotta: '#9A5844',
+              terracottaLight: '#C87A5B',
+              terracottaHover: '#D98B6C',
+              terracottaDark: '#4E2E23',
+              cream: '#F4EFEA',
+              creamMuted: '#D8CEC5',
+              creamDark: '#A8998D',
+              border: 'rgba(244, 239, 234, 0.08)',
+              borderWarm: 'rgba(200, 122, 91, 0.25)',
+            }
+          },
+          boxShadow: {
+            'glow-terracotta': '0 0 45px -10px rgba(200, 122, 91, 0.35)',
+            'inner-warm': 'inset 0 1px 1px 0 rgba(255, 255, 255, 0.1)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Noise texture overlay for high-end tactile feel */
+    .bg-grain {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.038'/%3E%3C/svg%3E");
+    }
+
+    /* Spring-physics feel for interactive components */
+    .btn-spring {
+      transition: transform 0.22s cubic-bezier(0.32, 0.72, 0, 1), box-shadow 0.22s cubic-bezier(0.32, 0.72, 0, 1), background-color 0.2s ease, border-color 0.2s ease;
+    }
+    .btn-spring:active {
+      transform: scale(0.978);
+    }
+  </style>
+</head>
+<body class="bg-[#110D0B] text-[#F4EFEA] font-sans antialiased selection:bg-[#9A5844]/40 selection:text-white min-h-[100dvh] relative overflow-x-hidden flex flex-col justify-between">
+
+  <!-- Grain Filter Pseudo-Layer -->
+  <div class="fixed inset-0 pointer-events-none bg-grain z-50"></div>
+
+  <!-- Warm Architectural Background Lighting -->
+  <div class="fixed top-[-10%] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#9A5844]/15 rounded-full blur-[140px] pointer-events-none z-0"></div>
+  <div class="fixed bottom-[-15%] right-[-10%] w-[450px] h-[450px] bg-[#4E2E23]/25 rounded-full blur-[150px] pointer-events-none z-0"></div>
+
+  <!-- TOP HERO BANNER / REAL ARCHITECTURE BACKDROP -->
+  <div class="relative w-full h-44 sm:h-52 overflow-hidden z-0">
+    <!-- Real Architectural Kitchen Photo from ATR Portfolio -->
+    <img src="./assets/hero_cocina.jpg" alt="Remodelación de Cocina Luxury ATR" class="w-full h-full object-cover object-center filter brightness-[0.7] contrast-[1.08] scale-105 transform hover:scale-100 transition-transform duration-1000">
+    <!-- Gradient Fade to Deep Espresso -->
+    <div class="absolute inset-0 bg-gradient-to-b from-[#110D0B]/40 via-[#110D0B]/70 to-[#110D0B]"></div>
+    
+    <!-- Top Franchise Badge Floating -->
+    <div class="absolute top-4 inset-x-0 flex justify-center px-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#110D0B]/85 border border-white/10 backdrop-blur-md shadow-lg text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase text-atr-creamMuted">
+        <span class="w-1.5 h-1.5 rounded-full bg-atr-terracottaLight"></span>
+        <span>Franquicia Oficial Cuautitlán Izcalli &amp; Zona Norte</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTAINER (Mobile-First Centered Architecture) -->
+  <main class="relative z-10 w-full max-w-[460px] mx-auto px-4 -mt-16 sm:-mt-20 flex flex-col gap-5 pb-12">
+
+    <!-- BRAND IDENTITY & HEADER CARD -->
+    <header class="p-1 rounded-[2rem] bg-gradient-to-b from-white/15 via-white/5 to-transparent border border-white/10 shadow-2xl backdrop-blur-xl">
+      <div class="p-6 bg-[#17120F]/95 rounded-[calc(2rem-4px)] flex flex-col items-center text-center relative overflow-hidden shadow-inner-warm">
+        
+        <!-- Subtle warm radial glow inside card -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-20 bg-atr-terracotta/20 rounded-full blur-2xl pointer-events-none"></div>
+
+        <!-- Official Brand Emblem: AQUÍ TU REMODELACIÓN -->
+        <div class="flex flex-col items-center mb-2 relative z-10">
+          <div class="flex items-center gap-2">
+            <!-- Architectural Roof / Diamond Icon -->
+            <svg class="w-6 h-6 text-atr-terracottaLight" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9.5L12 3l9 6.5"></path>
+              <path d="M19 13v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-6"></path>
+              <path d="M10 21v-5a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v5"></path>
+            </svg>
+            <span class="font-display font-extrabold text-xl tracking-tight text-white uppercase">AQUÍ</span>
+          </div>
+          <span class="font-display font-bold text-sm tracking-[0.22em] text-atr-cream uppercase -mt-0.5">
+            TU REMODELACIÓN
+          </span>
+          <span class="text-[9px] font-semibold tracking-[0.25em] text-atr-terracottaLight uppercase mt-1">
+            ARQUITECTURA &amp; DIRECCIÓN DE OBRA
+          </span>
+        </div>
+
+        <!-- Official Corporate Slogan -->
+        <p class="font-display font-medium text-xs text-atr-creamMuted italic mt-1">
+          "Tu vida evoluciona. Tu espacio también."
+        </p>
+
+        <!-- Value Proposition Summary -->
+        <p class="text-xs text-gray-300 mt-3 max-w-[340px] leading-relaxed">
+          Diseño y remodelación llave en mano de alto nivel: cocinas, baños y residencias completas. <span class="text-white font-medium">Presupuesto cerrado por contrato</span> y 2 años de garantía certificada.
+        </p>
+
+        <!-- Live Status Pill (Warm Terracotta Refinement - Cero Verde Neón) -->
+        <div class="mt-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-atr-terracotta/15 border border-atr-terracottaLight/30 text-atr-cream text-[10px] font-bold tracking-wider uppercase backdrop-blur-md">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-atr-terracottaLight opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-atr-terracottaLight"></span>
+          </span>
+          <span>Agenda Abierta • Visitas Técnicas esta semana</span>
+        </div>
+
+        <!-- Dynamic Source Tag (Updates via JS according to ?src=) -->
+        <div id="sourceBadge" class="hidden mt-2.5 px-2.5 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] text-gray-400 font-mono">
+          Origen: <span id="sourceText" class="text-atr-terracottaLight font-semibold">General</span>
+        </div>
+
+      </div>
+    </header>
+
+
+    <!-- ============================================================== -->
+    <!-- HERO COMPONENT: THE GOLDEN CTA (WhatsApp Presupuesto y Visita) -->
+    <!-- ============================================================== -->
+    <section>
+      <!-- Double-Bezel Enclosure: Terracotta Ambient Glow (Cero Neón) -->
+      <div class="p-1 rounded-[1.8rem] bg-gradient-to-b from-atr-terracottaLight/40 via-atr-terracottaDark/30 to-transparent border border-atr-terracottaLight/30 shadow-glow-terracotta">
+        
+        <a id="mainWhatsAppBtn" 
+           href="https://wa.me/525610638858?text=Hola%2C%20vi%20su%20Instagram%20y%20me%20gustar%C3%ADa%20agendar%20un%20diagn%C3%B3stico%20t%C3%A9cnico%20de%20remodelaci%C3%B3n%20%5BRef%3A%20ATR-IZCALLI-IG%5D" 
+           target="_blank" rel="noopener noreferrer" 
+           class="group block bg-[#181310] hover:bg-[#201814] rounded-[calc(1.8rem-4px)] p-5 btn-spring relative overflow-hidden shadow-inner-warm text-left">
+          
+          <!-- Background Ambient Flare -->
+          <div class="absolute -right-12 -top-12 w-40 h-40 bg-atr-terracottaLight/15 rounded-full blur-2xl group-hover:bg-atr-terracottaLight/25 transition-all duration-500"></div>
+
+          <div class="flex items-start justify-between gap-3 relative z-10">
+            <div>
+              <!-- Badge en Terracota Cálido -->
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-atr-terracotta/25 border border-atr-terracottaLight/35 text-atr-cream text-[10px] font-bold uppercase tracking-wider mb-2">
+                <svg class="w-3 h-3 text-atr-terracottaLight" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                Atención Prioritaria • SLA &lt; 5 min
+              </span>
+
+              <h2 class="font-display font-bold text-lg sm:text-[19px] text-white tracking-tight group-hover:text-atr-cream transition-colors">
+                Agendar Diagnóstico Técnico de Obra
+              </h2>
+              <p class="text-[12px] text-atr-creamMuted mt-1 leading-snug">
+                Levantamiento presencial en sitio con la <strong class="text-white font-semibold">Arq. Eva Villicaña</strong>. Evaluación métrica de tu espacio y cotización a precio cerrado.
+              </p>
+            </div>
+          </div>
+
+          <!-- Button-in-Button Action Footer -->
+          <div class="mt-4 pt-3.5 border-t border-white/10 flex items-center justify-between">
+            <span class="text-xs font-semibold text-atr-terracottaLight group-hover:text-atr-cream flex items-center gap-1.5 transition-colors">
+              <span>Escribir directo a WhatsApp</span>
+            </span>
+
+            <!-- Tactile Island Button in Warm Terracotta Gold -->
+            <div class="w-9 h-9 rounded-full bg-atr-terracottaLight hover:bg-atr-terracottaHover text-[#110D0B] flex items-center justify-center font-bold shadow-lg shadow-atr-terracotta/30 group-hover:scale-105 transition-all">
+              <svg class="w-4 h-4 translate-x-[0.5px] group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+              </svg>
+            </div>
+          </div>
+
+        </a>
+      </div>
+    </section>
+
+
+    <!-- ============================================================== -->
+    <!-- SECTION: DIRECCIÓN TÉCNICA (Arq. Eva & Juan Carlos con FOTOS)  -->
+    <!-- ============================================================== -->
+    <section class="flex flex-col gap-3">
+      
+      <div class="flex items-center justify-between px-1">
+        <h3 class="text-[11px] font-bold uppercase tracking-[0.18em] text-atr-creamDark">
+          Dirección Técnica &amp; Socios
+        </h3>
+        <span class="text-[10px] text-atr-terracottaLight font-semibold">Perfiles Verificados</span>
+      </div>
+
+      <!-- Card Arq. Eva Villicaña (CON FOTO REAL) -->
+      <a href="https://www.linkedin.com/in/eva-villicaña-712b59386/" 
+         target="_blank" rel="noopener noreferrer" 
+         class="group p-1 rounded-[1.4rem] bg-[#17120F] border border-white/10 hover:border-atr-terracottaLight/50 btn-spring block shadow-md">
+        <div class="p-3.5 bg-[#1F1916] rounded-[calc(1.4rem-4px)] flex items-center justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <!-- REAL PHOTO AVATAR -->
+            <div class="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-atr-terracottaLight/40 flex-shrink-0 shadow-md">
+              <img src="./assets/eva_villicana.png" alt="Arq. Eva Villicaña" class="w-full h-full object-cover object-top">
+              <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-full"></div>
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h4 class="font-display font-bold text-sm text-white group-hover:text-atr-terracottaLight transition-colors">
+                  Arq. Eva R. Villicaña
+                </h4>
+                <svg class="w-3.5 h-3.5 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+              </div>
+              <p class="text-[11px] text-atr-creamMuted">Directora de Operaciones &amp; Visitas Técnicas</p>
+              <p class="text-[10px] text-atr-terracottaLight font-medium mt-0.5">Egresada UNAM • Levantamientos y Renders 3D</p>
+            </div>
+          </div>
+          <div class="w-7 h-7 rounded-full bg-white/5 flex items-center justify-center text-gray-400 group-hover:text-white group-hover:bg-atr-terracottaLight/20 transition-colors flex-shrink-0">
+            <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card Juan Carlos Sánchez Velarde (CON FOTO REAL) -->
+      <a href="https://www.linkedin.com/in/juan-carlos-sánchez-velarde-7734b9443/" 
+         target="_blank" rel="noopener noreferrer" 
+         class="group p-1 rounded-[1.4rem] bg-[#17120F] border border-white/10 hover:border-atr-terracottaLight/50 btn-spring block shadow-md">
+        <div class="p-3.5 bg-[#1F1916] rounded-[calc(1.4rem-4px)] flex items-center justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <!-- REAL PHOTO AVATAR -->
+            <div class="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-atr-terracottaLight/40 flex-shrink-0 shadow-md">
+              <img src="./assets/juan_carlos.png" alt="Juan Carlos Sánchez Velarde" class="w-full h-full object-cover object-center">
+              <div class="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-full"></div>
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h4 class="font-display font-bold text-sm text-white group-hover:text-atr-terracottaLight transition-colors">
+                  Juan Carlos Sánchez Velarde
+                </h4>
+                <svg class="w-3.5 h-3.5 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+              </div>
+              <p class="text-[11px] text-atr-creamMuted">Socio Director • Franquicia Zona Norte</p>
+              <p class="text-[10px] text-atr-creamDark font-medium mt-0.5">Control Presupuestal, Contratos y Garantías</p>
+            </div>
+          </div>
+          <div class="w-7 h-7 rounded-full bg-white/5 flex items-center justify-center text-gray-400 group-hover:text-white group-hover:bg-atr-terracottaLight/20 transition-colors flex-shrink-0">
+            <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+    </section>
+
+
+    <!-- ============================================================== -->
+    <!-- SECTION: LOS 4 PILARES DE BLINDAJE ATR (Anti-Contratista)      -->
+    <!-- ============================================================== -->
+    <section class="grid grid-cols-2 gap-2.5">
+      
+      <!-- Pilar 1 -->
+      <div class="p-3.5 rounded-2xl bg-[#17120F] border border-white/5 flex flex-col justify-between">
+        <div class="w-7 h-7 rounded-lg bg-atr-terracotta/20 flex items-center justify-center text-atr-terracottaLight mb-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <div>
+          <p class="font-display font-bold text-xs text-white">Presupuesto Cerrado</p>
+          <p class="text-[10px] text-gray-400 mt-0.5 leading-snug">El precio pactado es el precio final. Cero cobros ocultos.</p>
+        </div>
+      </div>
+
+      <!-- Pilar 2 -->
+      <div class="p-3.5 rounded-2xl bg-[#17120F] border border-white/5 flex flex-col justify-between">
+        <div class="w-7 h-7 rounded-lg bg-atr-terracotta/20 flex items-center justify-center text-atr-terracottaLight mb-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <div>
+          <p class="font-display font-bold text-xs text-white">2 Años de Garantía</p>
+          <p class="text-[10px] text-gray-400 mt-0.5 leading-snug">Certificada por contrato con penalización por retraso.</p>
+        </div>
+      </div>
+
+      <!-- Pilar 3 -->
+      <div class="p-3.5 rounded-2xl bg-[#17120F] border border-white/5 flex flex-col justify-between">
+        <div class="w-7 h-7 rounded-lg bg-atr-terracotta/20 flex items-center justify-center text-atr-terracottaLight mb-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3"></path>
+          </svg>
+        </div>
+        <div>
+          <p class="font-display font-bold text-xs text-white">Renders 3D Previos</p>
+          <p class="text-[10px] text-gray-400 mt-0.5 leading-snug">Visualiza tu remodelación antes de comprar materiales.</p>
+        </div>
+      </div>
+
+      <!-- Pilar 4 -->
+      <div class="p-3.5 rounded-2xl bg-[#17120F] border border-white/5 flex flex-col justify-between">
+        <div class="w-7 h-7 rounded-lg bg-atr-terracotta/20 flex items-center justify-center text-atr-terracottaLight mb-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"></path>
+          </svg>
+        </div>
+        <div>
+          <p class="font-display font-bold text-xs text-white">Hasta 18 MSI</p>
+          <p class="text-[10px] text-gray-400 mt-0.5 leading-snug">Alianza con Santander y tarjetas bancarias participantes.</p>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ============================================================== -->
+    <!-- SECTION: PORTAFOLIO REAL Y REDES OFICIALES                     -->
+    <!-- ============================================================== -->
+    <section class="flex flex-col gap-3">
+      
+      <div class="px-1">
+        <h3 class="text-[11px] font-bold uppercase tracking-[0.18em] text-atr-creamDark">
+          Portafolio de Obras &amp; Canales Oficiales
+        </h3>
+      </div>
+
+      <!-- Featured Project Card: Baño Spa Travertino -->
+      <div class="rounded-2xl overflow-hidden bg-[#17120F] border border-white/10 group">
+        <div class="relative h-28 overflow-hidden">
+          <img src="./assets/hero_bano.jpg" alt="Baño Spa Travertino ATR" class="w-full h-full object-cover object-center filter brightness-90 group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#17120F] via-transparent to-black/20"></div>
+          <span class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-black/60 backdrop-blur-md text-[9px] font-bold uppercase tracking-wider text-atr-cream">
+            Obra Residencial ATR
+          </span>
+        </div>
+        <div class="p-3.5">
+          <p class="font-display font-bold text-xs text-white">Baño Spa en Mármol Travertino</p>
+          <p class="text-[11px] text-gray-400 mt-0.5">Diseño de iluminación indirecta, cancelería oculta y acabados premium.</p>
+        </div>
+      </div>
+
+      <!-- Social Links Grid -->
+      <div class="grid grid-cols-2 gap-2.5">
+        
+        <!-- Instagram Card -->
+        <a href="https://www.instagram.com/atr.zonanorte/" 
+           target="_blank" rel="noopener noreferrer" 
+           class="group p-3.5 rounded-2xl bg-[#17120F] border border-white/10 hover:border-pink-500/40 btn-spring flex flex-col justify-between">
+          <div>
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-[#FD1D1D] via-[#E1306C] to-[#833AB4] flex items-center justify-center text-white mb-2.5 shadow-md">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+            <p class="font-display font-bold text-xs text-white group-hover:text-pink-300 transition-colors">@atr.zonanorte</p>
+            <p class="text-[10px] text-gray-400 mt-0.5 leading-tight">Obras activas y videos en obra</p>
+          </div>
+          <span class="inline-flex items-center gap-1 text-[10px] text-pink-400 font-semibold mt-3 group-hover:translate-x-0.5 transition-transform">
+            Ver Instagram ↗
+          </span>
+        </a>
+
+        <!-- Facebook Card -->
+        <a href="https://www.facebook.com/profile.php?id=61593799352785" 
+           target="_blank" rel="noopener noreferrer" 
+           class="group p-3.5 rounded-2xl bg-[#17120F] border border-white/10 hover:border-blue-500/40 btn-spring flex flex-col justify-between">
+          <div>
+            <div class="w-8 h-8 rounded-xl bg-[#1877F2] flex items-center justify-center text-white mb-2.5 shadow-md">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </div>
+            <p class="font-display font-bold text-xs text-white group-hover:text-blue-300 transition-colors">Facebook Oficial</p>
+            <p class="text-[10px] text-gray-400 mt-0.5 leading-tight">Aquí Tu Remodelación Zona Norte</p>
+          </div>
+          <span class="inline-flex items-center gap-1 text-[10px] text-blue-400 font-semibold mt-3 group-hover:translate-x-0.5 transition-transform">
+            Ver Facebook ↗
+          </span>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ============================================================== -->
+    <!-- SECTION: COBERTURA RESIDENCIAL HIPERLOCAL                      -->
+    <!-- ============================================================== -->
+    <section class="p-4 rounded-2xl bg-[#17120F] border border-white/5 text-center">
+      <div class="flex items-center justify-center gap-1.5 text-atr-terracottaLight mb-1">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"></path>
+        </svg>
+        <span class="text-[10px] uppercase font-bold tracking-widest text-atr-creamMuted">
+          Zona de Cobertura y Visitas en Sitio
+        </span>
+      </div>
+      <p class="text-[11px] text-gray-300 font-medium leading-relaxed mt-1">
+        Cuautitlán Izcalli • Ciudad Satélite • Zona Esmeralda • Lomas Verdes • Arboledas • Valle Dorado • Atizapán • Tlalnepantla • Naucalpan
+      </p>
+    </section>
+
+
+    <!-- ============================================================== -->
+    <!-- FOOTER                                                         -->
+    <!-- ============================================================== -->
+    <footer class="pt-4 pb-2 text-center flex flex-col items-center gap-2">
+      <p class="text-[10px] text-atr-creamDark">
+        © 2026 Aquí Tu Remodelación — Franquicia Cuautitlán Izcalli &amp; Zona Norte.<br>
+        Todos los derechos reservados.
+      </p>
+
+    </footer>
+
+  </main>
+
+
+  <!-- ============================================================== -->
+  <!-- JAVASCRIPT: DYNAMIC REFERRAL & SOURCE ATTRIBUTION ENGINE       -->
+  <!-- ============================================================== -->
+  <script>
+    (function initATRBio() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const source = (urlParams.get('src') || urlParams.get('ref') || '').toLowerCase();
+      
+      const whatsappBtn = document.getElementById('mainWhatsAppBtn');
+      const sourceBadge = document.getElementById('sourceBadge');
+      const sourceText = document.getElementById('sourceText');
+
+      const phone = "525610638858";
+      let message = "Hola, vi su perfil oficial y me gustaría agendar un diagnóstico técnico de remodelación para mi propiedad [Ref: ATR-BIO-OFICIAL]";
+      let channelLabel = "Enlace Directo";
+
+      if (source === 'ig' || source.includes('instagram')) {
+        message = "Hola, vi su Instagram y me gustaría agendar un diagnóstico técnico de remodelación [Ref: ATR-IZCALLI-IG]";
+        channelLabel = "Instagram (@atr.zonanorte)";
+      } else if (source === 'li_jc' || source.includes('juancarlos')) {
+        message = "Hola Juan Carlos, vi tu perfil en LinkedIn y me interesa agendar una visita técnica de remodelación para mi propiedad [Ref: ATR-LI-JUANCARLOS]";
+        channelLabel = "LinkedIn de Juan Carlos";
+      } else if (source === 'li_eva' || source.includes('eva')) {
+        message = "Hola Arq. Eva, vi su perfil en LinkedIn y me gustaría agendar una visita técnica de remodelación [Ref: ATR-LI-EVA]";
+        channelLabel = "LinkedIn de Arq. Eva";
+      } else if (source === 'fb' || source.includes('facebook')) {
+        message = "Hola, vi su página de Facebook y me gustaría cotizar una remodelación con diagnóstico técnico [Ref: ATR-IZCALLI-FB]";
+        channelLabel = "Facebook Oficial";
+      }
+
+      // Update WhatsApp URL dynamically
+      if (whatsappBtn) {
+        whatsappBtn.href = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      }
+
+      // Show source pill if detected
+      if (source && sourceBadge && sourceText) {
+        sourceText.textContent = channelLabel;
+        sourceBadge.classList.remove('hidden');
+      }
+    })();
+  </script>
+</body>
+</html>
